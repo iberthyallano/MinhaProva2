@@ -34,9 +34,15 @@ class DetalhesFragment : Fragment() {
 
         binding.apply{
             textViewNomePersonagem.text = detalhesFragmentViewModel.nome;
-            textViewInterpretePersonagem.text = detalhesFragmentViewModel.interprete;
-            textViewFilmePersonagem.text = detalhesFragmentViewModel.filme;
-            textViewDescricaoPersonagem.text = detalhesFragmentViewModel.descricao;
+            textViewPoder.text = detalhesFragmentViewModel.poder;
+            textViewAtaque.text = detalhesFragmentViewModel.ataque.toString();
+            textViewDefesa.text = detalhesFragmentViewModel.defesa.toString();
+            if(detalhesFragmentViewModel.heroi == true){
+                textViewHeroi.text = "Heroi";
+            }else{
+                textViewHeroi.text = "Vilão"
+            }
+            textViewDescricao.text = detalhesFragmentViewModel.descricao;
         }
 
         setHasOptionsMenu(true);

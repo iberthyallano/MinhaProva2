@@ -65,4 +65,8 @@
             android:id="@+id/action_sobreFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/myDialogFragment"
+        android:name="pt.apt.minhaprova2.Fragments.MyDialogFragment"
+        android:label="MyDialogFragment" />
 </navigation>

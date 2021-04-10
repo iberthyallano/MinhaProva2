@@ -10,4 +10,7 @@
     <string name="filme">Filme:</string>
     <string name="click_para_inserir_uma_nova_imagem">Click para inserir uma nova imagem:</string>
     <string name="alterar">alterar</string>
+    <string name="poder">Poder:</string>
+    <string name="ataque">Ataque:</string>
+    <string name="heroi">Heroi:</string>
 </resources>

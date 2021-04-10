@@ -10,9 +10,12 @@ class CadastraFragmentViewModel(application: Application): AndroidViewModel(appl
 
     var imagem: ByteArray? = null;
     var nome: String = "";
-    var interprete: String = "";
-    var filme: String = "";
+    var poder: String = "";
+    var ataque: Float = 0.0f;
+    var defesa: Float = 0.0f;
+    var heroi: Boolean? = null;
     var descricao: String = "";
+
 
 
     val db: AppDatabase by lazy {

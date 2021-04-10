@@ -6,8 +6,10 @@ import androidx.room.PrimaryKey
 @Entity
 data class Personagem(
         var nome: String,
-        var interprete: String,
-        var filme: String,
+        var poder: String,
+        var ataque: Float,
+        var defesa: Float,
+        var heroi: Boolean?,
         var descricao: String) {
 
     @PrimaryKey(autoGenerate = true)

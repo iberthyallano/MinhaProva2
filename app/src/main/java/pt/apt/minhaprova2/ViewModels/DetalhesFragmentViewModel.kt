@@ -17,8 +17,10 @@ class DetalhesFragmentViewModel(application: Application): AndroidViewModel(appl
 
     var imagem: ByteArray? = null;
     var nome: String = "";
-    var interprete: String = "";
-    var filme: String = "";
+    var poder: String = "";
+    var ataque: Float = 0.0f;
+    var defesa: Float = 0.0f;
+    var heroi: Boolean? = null;
     var descricao: String = "";
 
     fun setDados(id : Long){
@@ -26,8 +28,10 @@ class DetalhesFragmentViewModel(application: Application): AndroidViewModel(appl
 
         imagem = personagem.imagem;
         nome = personagem.nome;
-        interprete = personagem.interprete;
-        filme = personagem.filme;
+        poder = personagem.poder;
+        ataque = personagem.ataque;
+        defesa = personagem.defesa;
+        heroi = personagem.heroi;
         descricao  = personagem.descricao;
     }
 

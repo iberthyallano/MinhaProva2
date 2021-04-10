@@ -2,6 +2,7 @@ package pt.apt.minhaprova2.Fragments
 
 import android.os.Bundle
 import android.view.*
+import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
@@ -26,12 +27,21 @@ class CadastraFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_cadastra, container, false);
         cadastraFragmentViewModel = ViewModelProvider(this).get(CadastraFragmentViewModel::class.java);
 
+        binding.radioGroupHeroiVilao.setOnCheckedChangeListener { _: RadioGroup, _: Int ->
+            if(binding.radioButtonHeroi.isChecked){
+                cadastraFragmentViewModel.heroi = true;
+            }else if(binding.radioButtonVilao.isChecked){
+                cadastraFragmentViewModel.heroi = false;
+            }
+        }
+
         binding.buttonCadastrar.setOnClickListener {
             cadastraFragmentViewModel.nome = binding.editTextTextNome.text.toString();
-            cadastraFragmentViewModel.interprete = binding.editTextTextInterprete.text.toString();
-            cadastraFragmentViewModel.filme = binding.editTextTextFilme.text.toString();
+            cadastraFragmentViewModel.poder = binding.editTextTextPoder.text.toString();
+            cadastraFragmentViewModel.ataque =  binding.editTextTextAtaque.text.toString().toFloat();
+            cadastraFragmentViewModel.defesa = binding.editTextTextDefesa.text.toString().toFloat();
             cadastraFragmentViewModel.descricao = binding.editTextTextDescricao.text.toString();
-            cadastraFragmentViewModel.cadastraDados(Personagem(cadastraFragmentViewModel.nome, cadastraFragmentViewModel.interprete, cadastraFragmentViewModel.filme, cadastraFragmentViewModel.descricao));
+            cadastraFragmentViewModel.cadastraDados(Personagem(cadastraFragmentViewModel.nome, cadastraFragmentViewModel.poder, cadastraFragmentViewModel.ataque, cadastraFragmentViewModel.defesa, cadastraFragmentViewModel.heroi, cadastraFragmentViewModel.descricao));
             Navigation.findNavController(it).navigate(CadastraFragmentDirections.actionCadastraFragmentToHomeFragment());
         }
 

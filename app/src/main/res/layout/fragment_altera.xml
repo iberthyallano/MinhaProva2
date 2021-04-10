@@ -36,58 +36,105 @@
             android:id="@+id/editTextTextNome"
             android:layout_width="347dp"
             android:layout_height="44dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="32dp"
             android:ems="10"
             android:hint="@string/nome"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
-            android:id="@+id/editTextTextInterprete"
+            android:id="@+id/editTextTextPoder"
             android:layout_width="347dp"
             android:layout_height="44dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="32dp"
             android:ems="10"
-            android:hint="@string/interprete"
+            android:hint="@string/poder"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextNome" />
 
         <EditText
-            android:id="@+id/editTextTextFilme"
-            android:layout_width="347dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="36dp"
+            android:id="@+id/editTextTextAtaque"
+            android:layout_width="168dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:hint="@string/ataque"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextTextDefesa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextTextDefesa" />
+
+
+        <EditText
+            android:id="@+id/editTextTextDefesa"
+            android:layout_width="168dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="32dp"
             android:ems="10"
             android:hint="@string/filme"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.868"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextInterprete" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPoder" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_heroi_vilao"
+            android:layout_width="129dp"
+            android:layout_height="102dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextAtaque"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextAtaque"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextDefesa">
+
+            <RadioButton
+                android:id="@+id/radioButtonVilao"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="20dp"
+                android:text="Vilão" />
+
+            <RadioButton
+                android:id="@+id/radioButtonHeroi"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="20dp"
+                android:text="Heroi" />
+
+        </RadioGroup>
 
         <EditText
             android:id="@+id/editTextTextDescricao"
-            android:layout_width="347dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="36dp"
+            android:layout_width="168dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="32dp"
             android:ems="10"
             android:hint="@string/descri_o"
             android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextFilme" />
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextDefesa"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextDefesa"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextDefesa" />
 
         <Button
-            android:id="@+id/buttonCadastrar"
+            android:id="@+id/buttonAltera"
             android:layout_width="347dp"
             android:layout_height="60dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="16dp"
             android:text="@string/alterar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextDescricao" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
