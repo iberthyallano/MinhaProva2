@@ -16,7 +16,7 @@ class MyDialogFragment: DialogFragment(){
             builder.setMessage("Para realizar o cadastro é bem simples:\n" +
                     "\nPrimeiro defina a imagem do seu personagem\n" +
                     "\nDepois diga seus dados como Nome, Poder, Ataque, Defesa.\n" +
-                    "\nPor fim faça uma decriação sobre ele e clickar no botão de cadastrar.")
+                    "\nPor fim faça uma decriação sobre ele e clicki no botão de cadastrar.")
                     .setPositiveButton("Okay",
                             DialogInterface.OnClickListener { dialog, id -> })
             builder.create()
