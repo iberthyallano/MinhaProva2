@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="pt.apt.minhaprova2.Fragments.HomeFragment"
+        android:label="Lista de Personagens"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_cadastraFragment"
+            app:destination="@id/cadastraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_alteraFragment"
+            app:destination="@id/alteraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sobreFragment"
+            app:destination="@id/sobreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastraFragment"
+        android:name="pt.apt.minhaprova2.Fragments.CadastraFragment"
+        android:label="Cadastrar"
+        tools:layout="@layout/fragment_cadastra">
+        <action
+            android:id="@+id/action_cadastraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alteraFragment"
+        android:name="pt.apt.minhaprova2.Fragments.AlteraFragment"
+        android:label="Alterar"
+        tools:layout="@layout/fragment_altera">
+        <action
+            android:id="@+id/action_alteraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesFragment"
+        android:name="pt.apt.minhaprova2.Fragments.DetalhesFragment"
+        android:label="Detalhes do personagem"
+        tools:layout="@layout/fragment_detalhes">
+        <action
+            android:id="@+id/action_detalhesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="id"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/sobreFragment"
+        android:name="pt.apt.minhaprova2.Fragments.SobreFragment"
+        android:label="Sobre o App"
+        tools:layout="@layout/fragment_sobre">
+        <action
+            android:id="@+id/action_sobreFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
