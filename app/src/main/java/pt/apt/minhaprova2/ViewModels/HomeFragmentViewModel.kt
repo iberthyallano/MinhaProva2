@@ -17,7 +17,6 @@ class HomeFragmentViewModel(application: Application): AndroidViewModel(applicat
                 .allowMainThreadQueries()
                 .build()
         }
-//        db.personagemDao().inserir(Personagem("teste" , "teste", "teste", "teste"));
         lista = db.personagemDao().listAll();
     }
 }
