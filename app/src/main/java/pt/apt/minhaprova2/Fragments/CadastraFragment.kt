@@ -60,6 +60,10 @@ class CadastraFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, this.findNavController()) || super.onOptionsItemSelected(item)
+        if(item.itemId == R.id.myDialogFragment){
+            val dialog = MyDialogFragment()
+            dialog.show(requireActivity().supportFragmentManager, "CadastraFragment")
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
